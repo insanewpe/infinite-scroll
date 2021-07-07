@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html { 
+    /* prevents padding from adding extra widht/height */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* stretches the content into 100% of the viewport*/
+    min-height: 100vh;
+    font-family: 'Bebas Neue', cursive;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+/* loader */
+.loader {
+    /*fixed positioning so the loader doesnt move while the user is scrolling on the page, with the top/bot/r/l we are making sure its extended through the entire page  */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255, 0.8);
+}
+/* targeting the child of the loader class */
+.loader img {
+    /* this way we make sure we are putting the image of the center of the page, without taking its size into consideration */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* Image container */
+.image-container {
+    margin: 10px 30%;
+
+}
+
+.image-container img {
+width: 100%;
+}
+
+/* media query: large smartphone */
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 20px;
+
+    }
+    .image-container {
+        margin: 10px;
+    }
+}
